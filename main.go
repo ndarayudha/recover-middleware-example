@@ -42,12 +42,6 @@ func recoverMiddleware(app http.Handler, dev bool) http.HandlerFunc {
 	}
 }
 
-// type ResponseWriter interface {
-// 	Header() Header
-// 	Write([]byte) (int, error)
-// 	WriteHeader(statusCode int)
-// }
-
 type responseWriter struct {
 	http.ResponseWriter
 	writes [][]byte
